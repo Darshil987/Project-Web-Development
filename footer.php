@@ -1,7 +1,7 @@
 <footer>
 	<div class="foot-container">
 		<div class="copyright">
-			<p>&copy; Team id:-224929 (Darshil,Kartik) </p>
+			<p>&copy; Patel Darshil </p>
 			<p id="demo">
 				<button type="button" class="btn" onclick="loadDoc()">About US</button>
 			</p>
