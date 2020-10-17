@@ -9,7 +9,7 @@ $conn = mysqli_connect('localhost', 'root');
 
 if($conn){
 	
-mysqli_select_db($conn, 'login');
+if(mysqli_select_db($conn, 'login')){
 $code='sdasddas';
 $code=md5($code);
 $name=$_POST['name'];	
@@ -41,7 +41,11 @@ if($num==1){
 	window.location='Verify.html';
 	</script>";
 }
-
+}else{
+	echo "<script type='text/javascript'>alert('Technical Fault! Server/ Database down. Please try again later');
+	window.location='Verify.html';
+	</script>";
+}
 }else{
 	echo "connection falied";
 }
