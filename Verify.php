@@ -3,9 +3,8 @@ if(!isset($_SEESION)){
 session_start();
 }
 $conn=mysqli_connect('localhost', 'root');
-
 if($conn){
-	mysqli_select_db($conn, 'login');
+	if(mysqli_select_db($conn, 'login')){
 	$code='sdasddas';$code=md5($code);
 	$username=$_POST['username'];
 	$_SESSION['username']=$username;
@@ -24,6 +23,11 @@ $num =mysqli_num_rows($result);
 		window.location='Verify.html';
 		</script>";
 	}
+}else{
+	echo "<script type='text/javascript'>alert('Technical Fault! Server/ Database down. Please try again later');
+	window.location='Verify.html';
+	</script>";
+}
 	
 }else{
 	echo"Connection falied";
