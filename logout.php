@@ -4,7 +4,7 @@
 	}
 
 	if(!isset($_SESSION['login_user'])){
-      header("location:Verify.html");
+      header("location:index.html");
       die();	
 	}
 	 
@@ -17,7 +17,7 @@
 	if(!isset($_SESSION['cart'])||count($_SESSION['cart'])<1){	
 		session_unset();
    		if(session_destroy()) {
-      		header("Location:Verify.html");
+      		header("Location:index.html");
    		}
 
 	}else{
@@ -73,7 +73,7 @@
 			header("location:cart.php");
 		}else{
 		session_unset();
-		header("Location:Verify.html");
+		header("Location:index.html");
 		}
 	}
 
