@@ -38,7 +38,7 @@ if($num==1){
 	mysqli_query($conn,$qw);
 
 	echo "<script type='text/javascript'>alert('Register Successfully');
-	window.location='Verify.html';
+	window.location='index.html';
 	</script>";
 }
 
@@ -134,7 +134,7 @@ if($num==1){
 			<input class="btn" type="reset" name="Reset" value="Reset" >
 			
 			<div class="reg">
-			<p>Already Register =><a href="Verify.html">Login Here</a></p>
+			<p>Already Register =><a href="index.html">Login Here</a></p>
 			</div>
 		</form>
 	</div>
