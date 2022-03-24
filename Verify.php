@@ -20,12 +20,12 @@ $num =mysqli_num_rows($result);
 		header('location:pass.php');
 	}else{
 		echo "<script type='text/javascript'>alert('Username does not exists');
-		window.location='Verify.html';
+		window.location='index.html';
 		</script>";
 	}
 }else{
 	echo "<script type='text/javascript'>alert('Technical Fault! Server/ Database down. Please try again later');
-	window.location='Verify.html';
+	window.location='index.html';
 	</script>";
 }
 	
